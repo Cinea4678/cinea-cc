@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import anime from "animejs";
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const xmark_go = {
     targets: ".xmarks-mainview",
@@ -25,7 +26,7 @@ onMounted(() => {
     <div class="hv-container">
         <div class="title">
             <p class="text-6xl">Hi, I am</p>
-            <h1 class="text-9xl">Cinea Zhan</h1>
+            <h1 class="text-9xl">Zhang Yao</h1>
         </div>
         <div class="background-icons">
             <div v-for="i in 10" :key="i" class="xmarks-mainview mt-2">
@@ -62,12 +63,6 @@ onMounted(() => {
     position: absolute;
     bottom: 20em;
     left: 3em;
-}
-
-.background-icon {
-    width: 1.5em;
-    height: 1.5em;
-    color: rgb(128, 128, 128);
 }
 
 .scrooldown-tip {

@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("https://blogsources-1305284863.file.myqcloud.com/webfonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    src: url("https://blogsources-1305284863.file.myqcloud.com/webfonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+}
