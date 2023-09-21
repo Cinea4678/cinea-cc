@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
         <div class="title flex">
             <h2 style="font-size: 6em;font-weight: 800;">About Me</h2>
         </div>
-        <x-marks-component class="marks" color="#ca1b30"/>
+        <x-marks-component class="marks" color="red"/>
         <div class="scrooldown-tip">
             <span>
                 <font-awesome-icon :icon="['fas', 'angles-down']" style="color: #ca1b30" size="lg" />

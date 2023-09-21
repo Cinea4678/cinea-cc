@@ -31,10 +31,16 @@ onMounted(() => {
 <template>
     <div class="flex">
         <div v-for="i in 15" :key="i" class="xmarks-mainview ml-3">
-            <font-awesome-icon :icon="['fas', 'xmark']" :style="`color: ${color}`" size="lg"/>
+            <font-awesome-icon :icon="['fas', 'xmark']" :class="color" size="lg"/>
         </div>
     </div>
 </template>
 <style scoped>
+.red{
+    color: #ca1b30;
+}
 
+.white{
+    color: white;
+}
 </style>

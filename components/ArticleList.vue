@@ -16,8 +16,8 @@ onMounted(()=>{
         <div class="title flex">
             <h2 style="font-size: 6em;font-weight: 800;">Articles</h2>
         </div>
-        <x-marks-component class="marks" color="#fff"/>
-        <div class="flex" style="padding-top: 18em;">
+        <x-marks-component class="marks" color="white"/>
+        <div class="flex mb-10" style="padding-top: 18em;">
             <div class="grow"/>
             <div class="container flex flex-wrap justify-center">
                 <ArticleTitleBlock v-for="article in articles" :key="article.title" :article="article"/>
