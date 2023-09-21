@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
         <div class="title flex">
             <h2 style="font-size: 6em;font-weight: 800;">About Me</h2>
         </div>
-        <x-marks-component/>
+        <x-marks-component class="marks" color="#ca1b30"/>
         <div class="scrooldown-tip">
             <span>
                 <font-awesome-icon :icon="['fas', 'angles-down']" style="color: #ca1b30" size="lg" />
@@ -18,6 +18,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
             <div class="photo-1">
                 <img class="object-cover" style="height: 100%;" src="https://blogsources-1305284863.cos.ap-nanjing.myqcloud.com/images/cinea-1.png" alt="照片">
             </div>
+            <span class="photo-text">2023年5月</span>
         </div>
         <div class="intro-1">
             <p>我叫<span class="text-2xl italic font-bold">张尧</span>，2002年8月生人，来自云南玉溪</p><br/>
@@ -31,6 +32,7 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
             <div class="photo-2">
                 <img class="object-cover" style="height: 100%;" src="https://blogsources-1305284863.cos.ap-nanjing.myqcloud.com/images/cinea-2.png" alt="照片">
             </div>
+            <span class="photo-text">2023年5月</span>
         </div>
         <div class="intro-2">
             <p>大二暑期参加学校组织的<span class="text-2xl italic font-bold">恒生电子</span> 夏令营，获得个人优秀技术称号</p><br/>
@@ -41,7 +43,9 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 <style scoped>
 .about-me {
-    height: 100vh;
+    position: relative;
+    width: 100vw;
+    height: 64em;
 }
 
 .title {
@@ -56,7 +60,13 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 .scrooldown-tip{
     position: absolute;
     top: 6em;
-    right: 2em;
+    right: 3em;
+}
+
+.marks {
+    position: absolute;
+    top: 6em;
+    left: 35em;
 }
 
 .photos-1{
@@ -76,6 +86,10 @@ import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
     position: absolute;
     top: 15em;
     left: 22em;
+    color: #ca1b30;
+}
+
+.photo-text{
     color: #ca1b30;
 }
 

@@ -2,6 +2,12 @@
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import anime from "animejs";
 
+interface Props {
+    color: string
+}
+
+defineProps<Props>()
+
 const xmark_go = {
     targets: ".xmarks-mainview",
     rotate: 90,
@@ -18,23 +24,17 @@ onMounted(() => {
         loop: true,
         durantion: 1500,
     });
-    tl.add(xmark_go).add(xmark_back, 3400);
+    tl.add(xmark_go).add(xmark_back, 4000);
 });
 </script>
 
 <template>
-    <div class="marks flex">
+    <div class="flex">
         <div v-for="i in 15" :key="i" class="xmarks-mainview ml-3">
-            <font-awesome-icon :icon="['fas', 'xmark']" style="color: #ca1b30" size="lg"/>
+            <font-awesome-icon :icon="['fas', 'xmark']" :style="`color: ${color}`" size="lg"/>
         </div>
     </div>
 </template>
 <style scoped>
-
-.marks {
-    position: absolute;
-    top: 6em;
-    left: 35em;
-}
 
 </style>
