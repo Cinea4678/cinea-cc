@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import moment from "moment";
+import {useRouter} from "#imports";
 
 interface Article {
     title: string
@@ -13,11 +14,16 @@ interface Props{
     article: Article
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
+const router = useRouter()
+
+const jump = () => {
+    router.push(props.article._path)
+}
 </script>
 
 <template>
-    <div class="article-block flex">
+    <div class="article-block flex" @click="jump">
         <div class="w-1/2 left">
             <img class="object-cover h-full" :src="article['header-image']" :alt="article.title"/>
         </div>
@@ -28,7 +34,9 @@ defineProps<Props>()
             <p class="mt-2">{{moment(article.date).format("LL")}}</p>
             <p class="mt-2">{{article.description}}</p>
             <div class="grow"/>
-            <p class="text-right underline underline-offset-4">立即查看 <font-awesome-icon :icon="['fas', 'angles-right']" style="color: #ffffff;" /></p>
+            <p class="text-right underline underline-offset-4">
+                <NuxtLink :to="article._path">立即查看 <font-awesome-icon :icon="['fas', 'angles-right']" style="color: #ffffff;" /></NuxtLink>
+            </p>
         </div>
     </div>
 </template>
@@ -48,6 +56,8 @@ defineProps<Props>()
 .article-block:hover{
     transform: translateX(-0.4em) translateY(-0.4em);
     filter: drop-shadow(4px 4px rgba(0,0,0,0.4));
+
+    cursor: pointer;
 }
 
 .left{
