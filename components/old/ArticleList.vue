@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ArticleTitleBlock from "~/components/ArticleTitleBlock.vue";
+import ArticleTitleBlock from "~/components/old/ArticleTitleBlock.vue";
 import {onMounted} from "#imports";
 
 const articles = ref([])

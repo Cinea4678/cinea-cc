@@ -1,17 +1,12 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <div>
-        <main>
-            <home-view />
-            <about-me />
-            <article-list />
-        </main>
-        <footer>
-            <footer-bar/>
-        </footer>
-    </div>
+  <div>
+    <main>
+      <Welcome />
+    </main>
+    <footer></footer>
+  </div>
 </template>
 
 <style scoped></style>
