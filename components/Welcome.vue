@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ScrollDownTip from "~/components/home/ScrollDownTip.vue"
-import CineaPicture from "~/components/home/CineaPicture.vue"
+import ScrollDownTip from "~/components/welcome/ScrollDownTip.vue"
+import CineaPicture from "~/components/welcome/CineaPicture.vue"
 </script>
 
 <template>

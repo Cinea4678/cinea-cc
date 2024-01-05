@@ -4,9 +4,14 @@
   <div>
     <main>
       <Welcome />
+      <Introduction />
     </main>
     <footer></footer>
   </div>
 </template>
 
-<style scoped></style>
+<style>
+main {
+  font-family: "Noto Sans SC", sans-serif;
+}
+</style>
