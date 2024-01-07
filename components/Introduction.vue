@@ -22,8 +22,11 @@ import ScrollDownTip from "~/components/welcome/ScrollDownTip.vue"
         </div>
       </div>
       <div
-        class="relative z-[21] col-span-8 max-w-[100vw] h-[calc(100vh-100px)] py-[30px] pl-[50px] shadow-2xl rounded-tr-[100px] rounded-bl-[100px] bg-white"
+        class="relative z-[21] col-span-8 max-w-[100vw] h-[calc(100vh-100px)] py-[30px] pl-[50px] shadow-2xl rounded-tr-[100px] rounded-bl-[100px] bg-white overflow-clip"
       >
+        <div class="absolute top-[50px] right-0">
+          <img src="/img/home/D05.png" class="w-[150px] lg:w-[220px]" alt="" />
+        </div>
         <div class="absolute left-[25px] top-[25px]">
           <scroll-down-tip />
         </div>

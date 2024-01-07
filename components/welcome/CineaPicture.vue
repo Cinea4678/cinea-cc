@@ -6,7 +6,7 @@
     <div class="absolute z-[20] top-[120px] -left-[100px] md:top-[110px] md:-left-[250px] lg:top-[132px] lg:-left-[300px]">
       <div class="font-extrabold font-['Urbanist'] text-8xl md:text-9xl lg:text-[120pt]">Zhang</div>
     </div>
-    <div class="absolute z-[22] top-[200px] -left-[73px] md:top-[130px] md:left-[300px] lg:top-[150px] lg:left-[350px]">
+    <div class="absolute z-[22] top-[200px] -left-[73px] md:top-[130px] md:left-[300px] lg:top-[150px] lg:left-[400px]">
       <div class="font-extrabold font-['Urbanist'] text-8xl md:text-9xl lg:text-[120pt]">Yao</div>
     </div>
   </div>
