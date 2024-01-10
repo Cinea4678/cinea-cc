@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import moment from "moment"
+import { useRouter } from "#imports"
 
 const props = defineProps<{ article: APP.Article; index: number }>()
+const router = useRouter()
+
 const odd = computed(() => props.index % 2 == 1)
 
 const cardHead = ref<HTMLDivElement | null>(null)
@@ -12,10 +15,14 @@ onMounted(() => {
     cardHead.value?.classList.add("bg-[#CA1B30]")
   }
 })
+
+const jump = () => {
+  router.push(props.article._path)
+}
 </script>
 
 <template>
-  <div class="w-[600px] max-w-full border border-black rounded-tl-[50px] rounded-br-[50px] overflow-clip">
+  <div class="w-[600px] max-w-full border border-black rounded-tl-[50px] rounded-br-[50px] overflow-clip" @click="jump">
     <div ref="cardHead" class="h-[40px] md:h-[60px] bg-black text-white relative flex px-3 items-center">
       <div class="pl-3 pb-1 md:pb-2 h-full flex items-end leading-6 text-[14pt] md:text-[20pt] font-medium">{{ article.title }}</div>
       <div class="grow" />

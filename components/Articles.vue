@@ -1,37 +1,19 @@
 <script setup lang="ts">
 import ClickTip from "~/components/article-list/ClickTip.vue"
 import ArticleComponent from "~/components/article-list/ArticleComponent.vue"
+import { onMounted } from "#imports"
 
-const articles = ref<APP.Article[]>([
-  {
-    headerImage: "https://blogsources-1305284863.file.myqcloud.com/images/IMG_9924.PNG",
-    _path: "",
-    date: new Date(),
-    description: "自主实现了一个基于 Rust 语言的多任务操作系统",
-    title: "基于 Rust 语言的多任务操作系统",
-  },
-  {
-    headerImage: "https://blogsources-1305284863.file.myqcloud.com/images/IMG_9924.PNG",
-    _path: "",
-    date: new Date(),
-    description: "自主实现了一个基于 Rust 语言的多任务操作系统",
-    title: "基于 Rust 语言的多任务操作系统",
-  },
-  {
-    headerImage: "https://blogsources-1305284863.file.myqcloud.com/images/IMG_9924.PNG",
-    _path: "",
-    date: new Date(),
-    description: "自主实现了一个基于 Rust 语言的多任务操作系统",
-    title: "基于 Rust 语言的多任务操作系统",
-  },
-  {
-    headerImage: "https://blogsources-1305284863.file.myqcloud.com/images/IMG_9924.PNG",
-    _path: "",
-    date: new Date(),
-    description: "自主实现了一个基于 Rust 语言的多任务操作系统",
-    title: "基于 Rust 语言的多任务操作系统",
-  },
-])
+const articles = ref<APP.Article[]>([])
+
+onMounted(() => {
+  queryContent()
+    .only(["title", "description", "_path", "date", "headerImage"])
+    .find()
+    .then((res) => {
+      articles.value = res as APP.Article[]
+      console.log(res)
+    })
+})
 </script>
 
 <template>
