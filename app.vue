@@ -1,4 +1,5 @@
 <template>
+  <Meta title="张尧 Zhang Yao" />
   <div>
     <NuxtPage />
   </div>
