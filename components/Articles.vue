@@ -22,7 +22,7 @@ onMounted(() => {
       <div class="font-bold font-['DM_Sans'] text-7xl md:text-9xl">Articles</div>
       <click-tip class="pb-[20px]" />
     </div>
-    <div class="pt-[50px] px-2 md:pl-[30px] flex flex-col gap-[10px] max-w-[1200px]">
+    <div class="pt-[50px] px-2 md:pl-[30px] flex flex-col gap-[10px] max-w-[1300px] mx-auto">
       <div v-for="(article, i) in articles" :key="i" :class="i % 2 == 1 ? 'flex flex-row-reverse' : 'flex flex-row'">
         <article-component class="hover:scale-105 hover:shadow-2xl hover:cursor-pointer duration-200" :article="article" :index="i" />
       </div>
