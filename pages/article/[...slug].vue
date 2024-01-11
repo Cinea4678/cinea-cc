@@ -2,6 +2,8 @@
 import { useRouter } from "nuxt/app"
 import "~/assets/css/article.scss"
 import ClickGoBack from "~/components/article/ClickGoBack.vue"
+import OtherArticleComponents from "~/components/article/OtherArticleComponents.vue"
+import RecentArticles from "~/components/article/RecentArticles.vue"
 
 const router = useRouter()
 </script>
@@ -23,25 +25,13 @@ const router = useRouter()
       </div>
 
       <div class="grid grid-cols-12 gap-5 max-w-[1300px] mx-auto">
-        <div class="col-span-8 bg-white rounded-tl-[60px] rounded-br-[60px] min-h-[500px] shadow-2xl px-2 md:px-5 py-1">
+        <div
+          class="col-span-12 md:col-span-8 bg-white rounded-tl-[60px] rounded-br-[60px] min-h-[500px] shadow-2xl px-2 md:px-5 py-1 md:pt-4 md:pb-8"
+        >
           <ContentDoc class="article" />
         </div>
-        <div class="col-span-4">
-          <div class="bg-white rounded-tr-[60px] rounded-br-[60px] min-h-[200px] shadow-2xl px-5 pt-5">
-            <div class="font-semibold text-xl">其他文章</div>
-            <div>
-              <LazyContentQuery
-                :only="['title', 'description', '_path', 'date', 'headerImage']"
-                sort="date"
-                :limit="5"
-                v-slot="data: { data: APP.Article[] }"
-              >
-                <div v-for="article in data.data">
-                  {{ article.title }}
-                </div>
-              </LazyContentQuery>
-            </div>
-          </div>
+        <div class="col-span-12 md:col-span-4">
+          <RecentArticles />
         </div>
       </div>
     </div>

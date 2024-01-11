@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 const router = useRouter()
 
 const backHome = () => {
-  router.push("/")
+  router.push("/#articles")
 }
 </script>
 

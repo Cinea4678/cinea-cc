@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-[100vh] bg-white">
+  <div class="min-h-[100vh] bg-white" id="articles">
     <div class="pt-[50px] pl-[30px] flex flex-col md:flex-row md:items-end gap-3">
       <div class="font-bold font-['DM_Sans'] text-7xl md:text-9xl">Articles</div>
       <click-tip class="pb-[20px]" />
